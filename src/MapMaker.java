@@ -43,7 +43,9 @@ public class MapMaker extends JComponent{
 	
 	public void addPosition(double x, double y)
 	{
-		points.add(new Point((int)x, (int)y));
+		int xInt = (int) Math.round(x);
+		int yInt = (int) Math.round(y);
+		points.add(new Point(xInt, yInt));
 		repaint();
 	}
 }
