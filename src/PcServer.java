@@ -16,8 +16,8 @@ public class PcServer {
 		frame.setSize(1000, 1000);
 		frame.setLocationRelativeTo(null);
 		
-		MapMaker mk = new MapMaker();
-		frame.add(mk);
+		MapMaker mm = new MapMaker();
+		frame.add(mm);
 		frame.setVisible(true);
 		
 		try
@@ -39,7 +39,7 @@ public class PcServer {
 					String[] sArray = message.split(",");
 					double x = Double.parseDouble(sArray[0]);
 					double y = Double.parseDouble(sArray[1]);
-					mk.addPosition(x, y);
+					mm.addPosition(x, y);
 				}
 				if(message.equalsIgnoreCase("quit"))
 				{
